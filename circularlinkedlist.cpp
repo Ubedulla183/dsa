@@ -40,6 +40,45 @@ using namespace std;
         }
         
     }
+    void deleteathead(){
+        if(head==NULL){
+            cout<<"list is empty"<<endl;
+            return;
+        }else if(head==tail){
+            delete head;
+            head=tail=NULL;
+            return;
+        }else{
+        Node* temp=head;
+        head=head->next;
+        tail->next=head;
+
+        temp->next=NULL;
+        delete temp;
+        }
+
+    }
+    void deleteattail(){
+        if(head==NULL){
+            cout<<"list is empty"<<endl;
+            return;
+        }else if(head==tail){
+            delete head;
+            head=tail=NULL;
+            return;
+        }else{
+            Node* temp=tail;
+            Node* prev=head;
+            while(prev->next!=tail){
+                prev=prev->next;
+            }
+                tail=prev;
+                prev->next=head;
+                temp->next=NULL;
+                delete temp;
+            
+        }
+    }
     void print(){
         if(head==NULL){
             cout<<"circularlist is empty"<<endl;
@@ -61,6 +100,9 @@ using namespace std;
     cl.insertathead(3);
      cl.insertattail(4);
     cl.insertattail(5);
+    cl.deleteathead();
+   cl.deleteattail();
+   cl.deleteattail();
     cl.print();
     return 0;
  }
