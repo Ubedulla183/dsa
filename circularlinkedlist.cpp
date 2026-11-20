@@ -28,6 +28,18 @@ using namespace std;
             tail->next=head;
         }
     }
+    void insertattail(int val){
+        Node* newnode=new Node(val);
+        if(tail==NULL){
+            head=tail=newnode;
+            tail->next=head;
+        }else{
+            tail->next=newnode;
+            tail=newnode;
+            tail->next=head;
+        }
+        
+    }
     void print(){
         if(head==NULL){
             cout<<"circularlist is empty"<<endl;
@@ -47,6 +59,8 @@ using namespace std;
     cl.insertathead(1);
     cl.insertathead(2);
     cl.insertathead(3);
+     cl.insertattail(4);
+    cl.insertattail(5);
     cl.print();
     return 0;
  }
