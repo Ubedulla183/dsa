@@ -43,6 +43,32 @@ class doublylist{
     }
 
    }
+   void pop_front(){
+    if(head==NULL){
+        cout<<"dll is empty"<<endl;
+        return;
+    }
+    Node* temp=head;
+    head=head->next;
+    if(head!=NULL){
+        head->prev=NULL;
+    }
+    temp->next=NULL;
+    delete temp;
+   }
+   void pop_back(){
+    if(head==NULL){
+        cout<<"dll is mepty"<<endl;
+        return;
+    }
+    Node* temp=tail;
+    tail=tail->prev;
+    if(tail!=NULL){
+        tail->next = NULL;
+    }
+    temp->prev=NULL;
+    delete temp;
+   }
    void print(){
     Node* temp=head;
 
@@ -58,11 +84,16 @@ class doublylist{
 int main(){
     doublylist dl;
     dl.push_front(10);
+    dl.push_front(5);
     dl.push_front(20);
     dl.push_front(30);
     dl.push_front(40);
     dl.push_back(50);
 
+    dl.pop_front();
+    dl.pop_front();
+    dl.pop_back();
+    dl.pop_back();
     dl.print();
 
     return 0;
