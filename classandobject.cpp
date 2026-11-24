@@ -3,15 +3,27 @@
 using namespace std;
 
 class teacher{
+    private: 
+    double salary;
     public:
     string name;   //attributes
     string dept;
     string subject;
-    double salary;
+   
     
    //methods
    void changedept(string newdept){
        dept = newdept;
+      }
+
+      //setter
+      void setsalary(double s){
+        salary =s;
+      }
+
+      //getter
+      double getsalary(){
+        return salary;
       }
 
 
@@ -22,11 +34,11 @@ int main(){
     t1.name = " arjun";
     t1.dept = "ise";
     t1.subject ="cpp";
-    t1.salary = 60000;
+    t1.setsalary(35000);
 
     cout<<t1.name<<endl;
     cout<<t1.dept<<endl;
     cout<<t1.subject<<endl;
-    cout<<t1.salary<<endl;
+    cout<<t1.getsalary()<<endl;
     return 0;
 }
