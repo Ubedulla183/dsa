@@ -6,21 +6,22 @@ class teacher{
     private: 
     double salary;
     public:
+    string name;
+    string dept;
+    string subject;
     /*teacher(){
         cout<< " hi, im constructor"<<endl;
         dept ="computer science";
     }*/
 
-    teacher( string n,string d,string s,double sal){
-   name = n;
-   dept=d;
-   subject=s;
-   salary=sal;
+    teacher( string name,string dept,string subject,double salary){
+   this->name = name;
+   this->dept=dept;
+   this->subject=subject;
+   this->salary=salary;
 
 }
-string name;
-string dept;
-string subject;
+
 
 
    
