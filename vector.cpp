@@ -33,7 +33,7 @@ int main(){
    {
     cout<<val<<endl;
    }
-   cout<<"after po back size="<<vecc.size()<<endl;
-   cout<<vecc.capacity()<<endl;
+   cout<<"after pop back size="<<vecc.size()<<endl;
+   cout<<"vector capacity="<<vecc.capacity()<<endl;
     return 0;
 }
