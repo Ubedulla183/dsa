@@ -6,13 +6,23 @@ class teacher{
     private: 
     double salary;
     public:
-    teacher(){
+    /*teacher(){
         cout<< " hi, im constructor"<<endl;
         dept ="computer science";
-    }
-    string name;   //attributes
-    string dept;
-    string subject;
+    }*/
+
+    teacher( string n,string d,string s,double sal){
+   name = n;
+   dept=d;
+   subject=s;
+   salary=sal;
+
+}
+string name;
+string dept;
+string subject;
+
+
    
     
    //methods
@@ -29,30 +39,22 @@ class teacher{
       double getsalary(){
         return salary;
       }
+      void getinfo(){
+        cout<<" name:"<< name<<endl;
+        cout<<"subject:"<< subject<<endl;
+      }
 
 
 };
-class acount{
-    private:
-     double balance;
-    string password;
 
-    public: 
-           string accountid;
-           string username;
-};
 
 int main(){
-    teacher t1;
-    teacher t2;
-    t1.name = " arjun";
-    t1.dept = "ise";
-    t1.subject ="cpp";
-    t1.setsalary(35000);
-
-    cout<<t1.name<<endl;
+    teacher t1("arjun","cse"," cpp",35000);
+    t1.getinfo();
+   
+    /*cout<<t1.name<<endl;
     cout<<t1.dept<<endl;
     cout<<t1.subject<<endl;
-    cout<<t1.getsalary()<<endl;
+    cout<<t1.getsalary()<<endl;*/
     return 0;
 }
