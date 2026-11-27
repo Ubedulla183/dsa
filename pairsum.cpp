@@ -19,7 +19,7 @@ vector<int> pair_sum(vector<int> nums,int target){
 }
 int main(){
     vector<int> nums={2,7,9,11,13};
-    int target =9;
+    int target =24;
     vector<int> ans=pair_sum(nums,target);
     cout<<ans[0]<<','<<ans[1]<<endl;
     return 0;
